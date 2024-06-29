@@ -1,0 +1,212 @@
+/*configuracion de variables*/
+
+@import url("https://use.typekit.net/qwz5esp.css");
+
+:root {
+    --main-color: #f3f3f3;
+    --secondary-color: #161516;
+    --third-color: yellow;
+    --third-color-t: #840404bc;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: var(--secondary-color);
+    color: var(--main-color);
+
+    hr {
+        color: var(--third-color);
+    }
+}
+
+
+h1{
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+   
+}
+h2{
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+header {
+    height: 10vh;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
+    nav {
+        height: 100%;
+    }
+}
+
+footer {
+    height: 35vh;
+
+    nav {
+        height: 100%;
+    }
+}
+
+@media (max-width: 575px) {
+    header {
+        height: initial;
+
+        nav {
+            height: initial;
+        }
+    }
+
+    footer {
+        height: 35vh;
+
+        nav {
+            height: initial;
+        }
+    }
+}
+
+
+.bgYellow {
+    background-color: var(--third-color);
+}
+
+/* -------------- estilos del HOME ----------------------*/
+
+
+header nav div div ul li a:hover {
+    font-weight: bolder;
+}
+
+header nav div a span {
+    font-family: "tt-autonomous", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.hero {
+    height: 85vh;
+    background: linear-gradient(to bottom, #000000a3, #000000a3), url("../assets/img/banner-bg.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    .contenedorTitulos {
+        text-align: center;
+
+        /*efecto blur a un contenedor*/
+        backdrop-filter: blur(8px);
+        width: 80%;
+        margin: 0 auto;
+        border-radius: 5px;
+        gap: 20px;
+    }
+}
+
+.imgTendencia:hover {
+    outline: 2px solid yellow;
+    border-radius: 5px;
+    transition: .1s ease;
+}
+
+
+/* buscador  */
+.inputEstilo {
+    font-weight: bold;
+    padding: 5px 10px;
+    outline: none;
+    background: #FFFFFF;
+    color: #000000;
+    border: 3px solid #ffffff;
+    border-radius: 10px;
+}
+
+.inputEstilo:focus {
+    background-color: yellow;
+    transition: .1s ease;
+}
+
+.inputEstilo:hover {
+    background-color: yellow;
+    transition: .1s ease;
+}
+
+
+/* FOOTER */
+footer div nav ul li a:hover {
+    text-decoration: underline;
+    font-weight: 700;
+
+}
+
+.peliculasAclamadas, .peliculasTendencias{
+    i{
+        color: var(--third-color);
+    }
+}
+
+.buscador, .peliculasAclamadas, .peliculasTendencias{
+    padding-top: 70px;
+}
+
+
+
+
+/*-----------estilos de DETALLE--------------*/
+.altoIframe {
+    height: 350px;
+}
+
+.sinLista {
+    list-style: none;
+}
+
+/* ---------- estilos REGISTRARSE------------ */
+.bodyRegistrarse {
+    height: 90vh;
+    background: linear-gradient(to bottom, #24242473, #24242473), url("../assets/img/bg-register.jpg");
+    background-size: cover;
+    background-position: center center;
+}
+
+.contenedorFormulario {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    /*efecto blur a un contenedor*/
+    background-color: var(--secondary-color);
+    width: 70%;
+    margin: 5px;
+    border-radius: 10px;
+
+}
+
+
+.seccionInicio {
+    height: 50vh;
+}
+
+.contenerdorFooter {
+    position: relative;
+    .footerLegales {
+        padding-top: 30px;
+        margin-bottom: 0; 
+        padding-bottom: 15px;
+    }
+}
+
+
+
+
