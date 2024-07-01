@@ -112,7 +112,7 @@ const cargarPeliculasAclamadas = async () => {
         img.classList.add('d-flex');
         img.classList.add('border');
         img.classList.add('border-secondary');
-        img.classList.add('border-3');
+        img.classList.add('border-2');
         img.classList.add('p-0');
         img.classList.add('justify-content-center');
         img.classList.add('align-items-center');
