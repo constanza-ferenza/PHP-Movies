@@ -32,14 +32,18 @@ const cargarPeliculasTendencia = async (page = 1) => {
         const ancla = document.createElement('a');
         ancla.href = './pages/detalle.html';
         ancla.classList.add('text-decoration-none');
+        
         // creo el div pelicula
         const pelicula = document.createElement('div');
         pelicula.classList.add('pelicula');
         pelicula.classList.add('col');
+        pelicula.classList.add('card');
+
         // creo la imagen
         const img = document.createElement('img');
         img.classList.add('imgTendencia');
         img.classList.add('img-fluid');
+        img.classList.add('img-card');
         img.classList.add('rounded-3');
         img.classList.add('shadow-lg');
         //img.classList.add('border');
@@ -50,13 +54,17 @@ const cargarPeliculasTendencia = async (page = 1) => {
         img.src = `https://image.tmdb.org/t/p/w500/${movie.poster_path}`;
         img.alt = movie.title;
         img.loading = 'lazy';
+
         // creo el div tituloPelicula
         const tituloPelicula = document.createElement('div');
         tituloPelicula.classList.add('tituloPelicula');
+        tituloPelicula.classList.add('card-img-overlay');
         tituloPelicula.classList.add('text-center');
+        
         // creo el h4
         const titulo = document.createElement('h4');
         titulo.classList.add('text-light');
+        titulo.classList.add('card-title');
         titulo.textContent = movie.title;
         // relaciono los elementos
         ancla.appendChild(pelicula);
@@ -70,7 +78,10 @@ const cargarPeliculasTendencia = async (page = 1) => {
     tendenciasContainer.parentElement.setAttribute('data-page', page);
 };
 
-// Función para cargar películas en el carrusel de películas aclamadas
+
+
+
+// Función para cargar películas en el carrusel de PELICULAS ACLAMADAS
 const cargarPeliculasAclamadas = async () => {
     // Realizamos una petición fetch a la API para obtener las películas más aclamadas
     const response = await fetch(`${API_SERVER}/movie/top_rated`, options);
