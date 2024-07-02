@@ -55,29 +55,29 @@
     </main>
 
     <section class="container mt-5 mb-5">
-        <form class="row" method="post" enctype="multipart/form-data">
+        <form class="row" method="post" enctype="multipart/form-data" id="administradorFormulario">
             <div class="mb-3 col-12 col-md-4">
                 <label for="titulo" class="form-label">Título</label>
                 <input type="text" class="form-control" id="titulo" name="titulo">
-                <div id="titulo-error" class="error"></div>
+                <div id="errorTitulo" class="text-danger"></div>
             </div>
 
             <div class="mb-3 col-12 col-md-4">
                 <label for="duracion" class="form-label">Duración</label>
                 <input type="text" class="form-control" id="duracion" name="duracion" placeholder="1h 46m">
-                <div id="duracion-error" class="error"></div>
+                <div id="errorDuracion" class="text-danger"></div>
             </div>
 
             <div class="mb-3 col-12 col-md-4">
-                <label for="genero" class="form-label">Título</label>
+                <label for="genero" class="form-label">Género</label>
                 <input type="text" class="form-control" id="genero" name="genero">
-                <div id="genero-error" class="error"></div>
+                <div id="errorGenero" class="text-danger"></div>
             </div>
 
             <div class="mb-3 col-12 col-md-12">
                 <label for="imagen" class="form-label">Imagen</label>
                 <input type="file" class="form-control" id="imagen" name="imagen">
-                <div id="imagen-error" class="error"></div>
+                <div id="errorImagen" class="text-danger"></div>
             </div>
 
             <div class="mb-3">
@@ -157,6 +157,7 @@
 
 
     <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/validacion_administrador.js"></script>
 </body>
 
 </html>

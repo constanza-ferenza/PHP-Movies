@@ -30,13 +30,19 @@ h1 {
     font-size: 4rem;
     font-weight: 700;
     margin-bottom: 20px;
-
 }
 
 h2 {
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 20px;
+}
+
+hr {
+    border: solid 1px yellow;
+    width: 80vw;
+    margin: auto;
+
 }
 
 header {
@@ -56,6 +62,16 @@ footer {
     }
 }
 
+
+/* media queries */
+
+@media only screen and (max-width: 1200px){
+    h1{
+        font-size: 3rem;
+    }
+    
+}
+
 @media (max-width: 575px) {
     header {
         height: initial;
@@ -64,6 +80,19 @@ footer {
             height: initial;
         }
     }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
 
     footer {
         height: 35vh;
@@ -75,9 +104,14 @@ footer {
 }
 
 
+
 .bgYellow {
     background-color: var(--third-color);
 }
+
+
+
+
 
 /* -------------- estilos del HOME ----------------------*/
 
@@ -93,7 +127,7 @@ header nav div a span {
 }
 
 .hero {
-    height: 85vh;
+    height: 90vh;
     background: linear-gradient(to bottom, #000000a3, #000000a3), url("../assets/img/banner-bg.jpg");
     background-position: center center;
     background-size: cover;
@@ -107,7 +141,7 @@ header nav div a span {
         text-align: center;
 
         /*efecto blur a un contenedor*/
-        backdrop-filter: blur(8px);
+        backdrop-filter: blur(10px);
         width: 80%;
         margin: 0 auto;
         border-radius: 5px;
@@ -143,6 +177,63 @@ header nav div a span {
     transition: .1s ease;
 }
 
+/* galería TENDENCIAS */
+.card {
+    position: relative;
+    background-color: transparent;
+    background-clip: border-box;
+    border: none;
+}
+
+.card-img-overlay {
+    display: none;
+}
+
+.card:hover {
+    border-style: solid;
+    border-width: 2px;
+    border-color: var(--third-color);
+    box-shadow: 0px 2px 8px 0px rgba(209, 224, 75, 0.5), 0px 4px 16px 0px rgba(224, 214, 75, 0.5);
+    transform: scale(0.8);
+    transition: all 0.8s;
+
+    .img-card {
+        filter: blur(8px);
+
+        box-shadow: 0px 9px 30px rgba(255, 149, 5, 0.3);
+    }
+
+    .card-img-overlay {
+        display: inline-block;
+        /*justify-content: center;
+        align-items: center;
+        margin: 0;*/
+        background: linear-gradient(to bottom, #24242411, #24242473);
+
+        .card-title {
+            position: relative;
+            text-shadow: 1px 2px 21px #000000;
+            top: 50%;
+            bottom: 50%;
+
+
+
+        }
+    }
+}
+
+.carousel-item {
+    padding-bottom: 40px;
+}
+
+.border {
+    border: 2px solid #dee2e6 !important;
+}
+
+.w-25 {
+    width: 150px !important;
+}
+
 
 /* FOOTER */
 footer div nav ul li a:hover {
@@ -164,7 +255,17 @@ footer div nav ul li a:hover {
     padding-top: 70px;
 }
 
+.contenerdorFooter {
+    .footerLegales {
+        padding-top: 30px;
+        margin-bottom: 0;
+        padding-bottom: 15px;
+    }
+}
 
+.flecha {
+    margin-bottom: 10px;
+}
 
 
 /*-----------estilos de DETALLE--------------*/
@@ -195,67 +296,13 @@ footer div nav ul li a:hover {
                 margin: 5px;
                 border-radius: 10px;
                 box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+                margin: 0;
             }
         }
     }
 }
 
 
-.contenerdorFooter {
-    .footerLegales {
-        padding-top: 30px;
-        margin-bottom: 0;
-        padding-bottom: 15px;
-    }
+.text-danger{
+    color: #cf6678 !important;;
 }
-
-.card {
-    position: relative;
-    background-color: transparent;
-    background-clip: border-box;
-    border: none;
-}
-
-.card-img-overlay {
-    display: none;
-}
-
-.card:hover {
-    border-style: solid;
-    border-width: 2px;
-    border-color: var(--third-color);
-    box-shadow: 0px 2px 8px 0px rgba(209, 224, 75, 0.5), 0px 4px 16px 0px rgba(224, 214, 75, 0.5);
-
-    .img-card {
-        filter: blur(5px);
-
-        box-shadow: 0px 9px 30px rgba(255, 149, 5, 0.3);
-    }
-
-    .card-img-overlay {
-        display: inline-block;
-        justify-content: center;
-        align-items: center;
-        background: linear-gradient(to bottom, #24242411, #24242473);
-
-        .card-title {
-            text-shadow: 1px 2px 21px #000000;
-        }
-
-    }
-}
-
-.carousel-item{
-    padding-bottom: 40px;
-}
-.border {
-    border: 2px solid #dee2e6 !important;
-}
-
-.w-25{
-    width: 150px !important;
-}
-
-/*
-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19),
-0 6px 6px rgba(0, 0, 0, 0.23);*/
